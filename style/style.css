@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Cyberpunk/90s Vibe Overrides - Futuristic Fonts & Muted Neon */
+body {
+  background: radial-gradient(circle at top center, #1a001a, #000);
+  background-attachment: fixed;
+  font-family: 'VT323', monospace;
+  color: #9abbbf;
+  margin: 0;
+  animation: flicker-background 12s infinite;
+}
+
+@keyframes flicker-background {
+  0%, 100% { background-position: top center; }
+  33% { background-position: calc(50% + 2px) calc(50% + 1px); }
+  66% { background-position: calc(50% - 1px) calc(50% - 1px); }
+}
+
+#container {
+  margin: 2em auto;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.95); /* Slightly darker background */
+  border: 1px solid #0af; /* Brighter border for better contrast */
+  box-shadow: 0 0 10px #08a;
+  padding: 1.5em;
+}
+
+/* Header Navigation */
+#header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em;
+  display: flex;
+  gap: 1em;
+}
+#header li a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: #88ccff;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #88ccff;
+  padding: 0.3em 0.8em;
+  box-shadow: 0 0 5px #88ccff;
+  transition: all 0.2s ease;
+}
+#header li a:hover {
+  color: #aaffff;
+  border-color: #aaffff;
+  box-shadow: 0 0 8px #aaffff;
+}
+
+/* Headings - Futuristic Neon with Stroke */
+h1, h2, h3, h4, h5 {
+  font-family: 'Orbitron', sans-serif;
+  color: #22dd22;
+  -webkit-text-stroke: 1px #000;
+  text-shadow:
+    0 0 3px #22dd22,
+    0 0 6px #22dd22;
+  letter-spacing: 0.5px;
+}
+
+/* Link Styles */
+a {
+  font-family: 'Orbitron', sans-serif;
+  color: #cc00cc;
+  text-decoration: underline;
+  text-shadow:
+    0 0 3px #cc00cc;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #ff66ff;
+  text-shadow:
+    0 0 5px #ff66ff;
+}
+
+/* Dividers */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, #cc00cc33, #00ccff33);
+  margin: 2em 0;
+}
+
+/* Post List Links */
+#recentpostlistdiv ul li a {
+  display: block;
+  padding: 0.4em 0;
+  color: #88ccff;
+  border-bottom: 1px solid rgba(100, 0, 100, 0.3);
+}
+/* Enhance hover effects for post list links */
+#recentpostlistdiv ul li a:hover {
+  color: #aaffff;
+  text-shadow: 0 0 5px #aaffff;
+  background: rgba(0, 0, 0, 0.5); /* Add subtle background on hover */
+}
+
+/* Footer */
+#footer {
+  color: #aaa; /* Lighter text for better contrast */
+  font-family: 'Orbitron', sans-serif;
+  border-top: 1px solid rgba(100, 0, 100, 0.3);
+  padding: 1.5em 0 0; /* Add more padding for spacing */
+  text-align: center;
+  font-size: 0.9em; /* Slightly larger font size */
+}
+
+/* Images */
+img {
+  border: 1px solid #00ccff;
+  box-shadow: 0 0 8px #00ccff;
+  margin: 1em 0;
+}
+
+/* Responsive tweak */
+@media only screen and (max-width: 600px) {
+  #container {
+    width: 95%;
+    padding: 1em;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+/* Pulse neon */
+.pulse {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #22dd22;
+  text-shadow: 0 0 5px #22dd22, 0 0 10px #22dd22;
+  animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 0 0 5px #22dd22, 0 0 10px #22dd22;
+  }
+  to {
+    text-shadow: 0 0 15px #22dd22, 0 0 30px #00ff00;
+  }
+}
+
+/* Typewriter effect */
+.typewriter {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #22dd22;
+  direction: ltr;
+  text-align: right;
+  animation:
+    typing 3s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50%      { border-color: #22dd22; }
+}
+/* style/style.css */
+
+/* 1. כיוון כולל RTL */
+html {
+  direction: rtl;
+}
+body {
+  text-align: right;
+}
+
+/* 2. ניווט מימין */
+#header ul {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+/* 3. יישור אלפנטרי לפסקאות וכותרות */
+p, li, h2, h3, h4, h5 {
+  text-align: right;
+}
+h1 {
+  text-align: center;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #08a; border-radius: 4px; }
+
+a {
+  position: relative;
+  display: inline-block; /* Ensure the anchor wraps only the text */
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #cc00cc, #00ccff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+a:hover::after {
+  transform: scaleX(1);
+}
+
+.gradient-bg {
+  background: linear-gradient(270deg, #080, #0ff, #f0f);
+  background-size: 600% 600%;
+  animation: move-gradient 8s ease infinite;
+}
+@keyframes move-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+h2.post-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2rem;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+header, footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: left;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  body {
+      font-size: 16px; /* Adjust font size for readability */
+  
+   
+  }
+
+  header, footer {
+      padding: 15px; /* Adjust padding for smaller screens */
+      text-align: center; /* Center-align text for better layout */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack navigation links vertically */
+      gap: 10px; /* Add spacing between links */
+  }
+
+  img {
+      max-width: 100%; /* Ensure images scale properly */
+      height: auto;
+  }
+
+  .content {
+      padding: 15px; /* Add padding to content sections */
+  }
+
+  button, a {
+      padding: 10px 15px; /* Make buttons and links touch-friendly */
+      font-size: 16px; /* Adjust font size for readability */
+  }
+}
+/* Dark mode styles */
+
+.dancingbaby {
+  display: flex;
+  justify-content: center;
+  inline-size: auto;
+}
+
+/* CSS */
+.btn-90s-contact {
+  --main-color: #00ffea;
+  --accent-color: #ff00dd;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  font-family: 'Comic Sans MS', Impact, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0.2em 0.5em;
+  background: linear-gradient(135deg, var(--main-color) 0%, var(--accent-color) 100%);
+  border: 4px outset var(--accent-color);
+  border-radius: 12px;
+  text-shadow: 2px 2px 0px var(--shadow-color);
+  box-shadow:
+    inset 0 0 5px rgba(255,255,255,0.7),
+    4px 4px 0 var(--shadow-color);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  align-content: center;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Pseudo-element for extra sparkle */
+.btn-90s-contact::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.6), transparent 60%);
+  transform: rotate(45deg) translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Hover effects */
+.btn-90s-contact:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow:
+    inset 0 0 8px rgba(255,255,255,0.9),
+    6px 6px 0 var(--shadow-color);
+}
+
+.btn-90s-contact:hover::before {
+  opacity: 1;
+  animation: sparkle 0.8s ease-out forwards;
+}
+
+/* Keyframes for sparkle pulse */
+@keyframes sparkle {
+  0%   { transform: rotate(45deg) translate(-50%, -50%) scale(0); }
+  50%  { opacity: 1; transform: rotate(45deg) translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: rotate(45deg) translate(-50%, -50%) scale(1.5); }
+}
